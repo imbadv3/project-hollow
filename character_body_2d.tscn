@@ -1,0 +1,31 @@
+[gd_scene load_steps=5 format=3 uid="uid://b6u5s7816yb1h"]
+
+[ext_resource type="Texture2D" uid="uid://dqwrfsc0ivc17" path="res://images/pixil-frame-0-3 (1).png" id="1_jlto6"]
+[ext_resource type="Script" path="res://scene/character_body_2d.gd" id="1_u7d7u"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_8w2uh"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_jlto6")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_qdacu"]
+height = 25.6
+
+[node name="CharacterBody2D" type="CharacterBody2D"]
+position = Vector2(-1, 1)
+collision_mask = 6
+script = ExtResource("1_u7d7u")
+metadata/_edit_group_ = true
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_8w2uh")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+scale = Vector2(5, 5)
+shape = SubResource("CapsuleShape2D_qdacu")

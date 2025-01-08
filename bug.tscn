@@ -1,0 +1,33 @@
+[gd_scene load_steps=5 format=3 uid="uid://ckyevr0fchq7q"]
+
+[ext_resource type="Script" path="res://scene/bug.gd" id="1_7kgon"]
+[ext_resource type="Texture2D" uid="uid://dqwrfsc0ivc17" path="res://images/pixil-frame-0-3 (1).png" id="2_1pdty"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_go0tn"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_1pdty")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_45hkf"]
+radius = 65.0
+height = 134.0
+
+[node name="bug" type="CharacterBody2D"]
+position = Vector2(688, 210)
+collision_layer = 4
+collision_mask = 3
+script = ExtResource("1_7kgon")
+metadata/_edit_group_ = true
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+rotation = 3.14159
+sprite_frames = SubResource("SpriteFrames_go0tn")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CapsuleShape2D_45hkf")
