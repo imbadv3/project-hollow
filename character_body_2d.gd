@@ -24,10 +24,12 @@ func get_input():
 		velocity.y = jump_speed
 	
 	if right:
-		velocity.x += run_speed
+		scale.x = 1
+		#velocity.x += run_speed
 	
 	if left:
-		velocity.x -= run_speed
+		scale.x = -1
+		#velocity.x -= run_speed
 	
 	if health < 0:
 		position = Vector2(0,0)
@@ -63,3 +65,7 @@ func _physics_process(delta):
 
 func _on_area_2d_2_body_entered(body: Node2D) -> void:
 	health += -1
+
+
+func _on_area_2d_2_body_exited(body: Node2D) -> void:
+	pass # Replace with function body.

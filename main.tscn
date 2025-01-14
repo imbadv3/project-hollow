@@ -29,7 +29,7 @@ tile_map_data = PackedByteArray("AAAAAAoAAAAAAAAAAAABAAoAAAAAAAAAAAACAAoAAAAAAAA
 tile_set = SubResource("TileSet_h7plf")
 
 [node name="CharacterBody2D" parent="TileMapLayer" instance=ExtResource("2_64w4s")]
-position = Vector2(-105, 14)
+position = Vector2(329, 183)
 
 [node name="Area2D" type="Area2D" parent="TileMapLayer/CharacterBody2D"]
 collision_mask = 4
@@ -38,7 +38,7 @@ collision_mask = 4
 shape = SubResource("RectangleShape2D_kcodd")
 
 [node name="bug" parent="TileMapLayer" instance=ExtResource("3_m7v1c")]
-position = Vector2(197, 6)
+position = Vector2(805, 94)
 
 [node name="Area2D2" type="Area2D" parent="TileMapLayer/bug"]
 collision_layer = 4
