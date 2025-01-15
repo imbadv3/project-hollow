@@ -8,6 +8,8 @@ const max_health = 10
 var heal_amount = 1
 var stickdg = 1
 
+func _ready() -> void:
+	Dialogic.start("armadillo")
 
 func get_input():
 	velocity.x = 0
@@ -27,7 +29,7 @@ func get_input():
 		transform.x.x = 1
 		velocity.x += run_speed
 	
-	if left :
+	if left:
 		transform.x.x = -1
 		velocity.x -= run_speed
 	
@@ -51,7 +53,7 @@ func get_input():
 	
 func _physics_process(delta):
 	
-	print(health)
+	# print(health)
 	velocity.y += gravity * delta
 	
 	get_input()

@@ -8,7 +8,7 @@ var health = 3
 
 
 func _physics_process(delta: float) -> void:
-	print(health)
+	 # print(health)
 	timer += -1
 	if timer == -60:
 		timer = 60
