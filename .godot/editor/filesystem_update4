@@ -1,4 +1,11 @@
+<<<<<<< HEAD
 res://character_body_2d.tscn
 res://bug.tscn
 res://main.tscn
 res://character_body_2d.gd
+=======
+res://Dialogic/characters/armadillo.dch
+res://Dialogic/characters/timeline.dtl
+res://Dialogic/characters/armadillo.dtl
+res://main.tscn
+>>>>>>> 2b38b6fe4f26d2cc7776f452f98973f17f94014e
