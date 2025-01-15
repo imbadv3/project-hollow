@@ -1,11 +1,11 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1736898361
-bug.gd::GDScript::-1::1736896750::0::1::::<>CharacterBody2D<>::
+::res://::1736979579
+bug.gd::GDScript::-1::1736979102::0::1::::<>CharacterBody2D<>::
 bug.tscn::PackedScene::5524556171254236616::1736898338::0::1::::<><>::res://bug.gd<>uid://dqwrfsc0ivc17::::res://pixil-frame-0-3 (1).png
-character_body_2d.gd::GDScript::-1::1736896750::0::1::::<>CharacterBody2D<>::
+character_body_2d.gd::GDScript::-1::1736979141::0::1::::<>CharacterBody2D<>::
 character_body_2d.tscn::PackedScene::4605417778576025647::1736898348::0::1::::<><>::uid://dqwrfsc0ivc17::::res://pixil-frame-0-3 (1).png<>res://character_body_2d.gd
 icon.svg::CompressedTexture2D::7158581785624142745::1736377355::1736897630::1::::<><>::
-main.tscn::PackedScene::2380333326545407725::1736898352::0::1::::<><>::uid://b88ew8oxokib0::::res://pixil-frame-0-8.png<>uid://b6u5s7816yb1h::::res://character_body_2d.tscn<>res://character_body_2d.gd<>uid://ckyevr0fchq7q::::res://bug.tscn
+main.tscn::PackedScene::2380333326545407725::1736979143::0::1::::<><>::uid://b88ew8oxokib0::::res://pixil-frame-0-8.png<>uid://b6u5s7816yb1h::::res://character_body_2d.tscn<>uid://ckyevr0fchq7q::::res://bug.tscn
 pixil-frame-0-3 (1).png::CompressedTexture2D::8328741927381007076::1736377355::1736896764::1::::<><>::
 pixil-frame-0-6.png::CompressedTexture2D::1192663910277252212::1736896750::1736896764::1::::<><>::
 pixil-frame-0-8.png::CompressedTexture2D::4771060901031058283::1736377355::1736896764::1::::<><>::
@@ -625,4 +625,12 @@ timeline.gd::GDScript::-1::1736897630::0::1::::DialogicTimeline<>Resource<>::
 TimelineResourceLoader.gd::GDScript::-1::1736897630::0::1::::DialogicTimelineFormatLoader<>ResourceFormatLoader<>::
 TimelineResourceSaver.gd::GDScript::-1::1736897630::0::1::::DialogicTimelineFormatSaver<>ResourceFormatSaver<>::
 ::res://Dialogic/::1736898224
-::res://Dialogic/characters/::1736898224
+::res://Dialogic/characters/::1736978225
+armadillo.dch::Resource/DialogicCharacter::-1::1736976068::0::1::::<><>::
+armadillo.dtl::Resource/DialogicTimeline::-1::1736978225::0::1::::<><>::
+::res://images/::1736979640
+pixil-frame-0-4.png::CompressedTexture2D::1495249220535949372::1734564014::1736979664::1::::<><>::
+pixil-frame-0-6.png::CompressedTexture2D::6935222123489303004::1736287625::1736979664::1::::<><>::
+pixil-frame-0-7.png::CompressedTexture2D::1398235675087785832::1736290316::1736979664::1::::<><>::
+pixil-frame-0-8.png::CompressedTexture2D::227873549313096280::1736978312::1736979664::1::::<><>::
+pixilart-sprite.png::CompressedTexture2D::64383683303927728::1736892449::1736979664::1::::<><>::

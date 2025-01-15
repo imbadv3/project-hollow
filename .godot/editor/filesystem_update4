@@ -2,3 +2,5 @@ res://Dialogic/characters/armadillo.dch
 res://Dialogic/characters/timeline.dtl
 res://Dialogic/characters/armadillo.dtl
 res://main.tscn
+res://character_body_2d.gd
+res://bug.gd
