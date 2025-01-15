@@ -1,0 +1,11 @@
+ea4bc82a6ad023ab7ee23ee620429895
+::res://::1736890746
+bug.gd::GDScript::-1::1736890708::0::1::::<>CharacterBody2D<>::
+bug.tscn::PackedScene::5524556171254236616::1736890708::0::1::::<><>::res://scene/bug.gd<>uid://dqwrfsc0ivc17::::res://images/pixil-frame-0-3 (1).png
+character_body_2d.gd::GDScript::-1::1736890708::0::1::::<>CharacterBody2D<>::
+character_body_2d.tscn::PackedScene::4605417778576025647::1736890708::0::1::::<><>::uid://dqwrfsc0ivc17::::res://images/pixil-frame-0-3 (1).png<>res://scene/character_body_2d.gd
+icon.svg::CompressedTexture2D::5715185662745315732::1736890708::1736890747::1::::<><>::
+main.tscn::PackedScene::2380333326545407725::1736890708::0::1::::<><>::uid://b88ew8oxokib0::::res://images/pixil-frame-0-8.png<>uid://b6u5s7816yb1h::::res://scene/character_body_2d.tscn<>uid://dlegnuyic0rn0::::res://bug.tscn
+pixil-frame-0-3 (1).png::CompressedTexture2D::8328741927381007076::1736890708::1736890747::1::::<><>::
+pixil-frame-0-6.png::CompressedTexture2D::1192663910277252212::1736890708::1736890747::1::::<><>::
+pixil-frame-0-8.png::CompressedTexture2D::4771060901031058283::1736890708::1736890747::1::::<><>::

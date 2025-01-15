@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://b6u5s7816yb1h"]
 
-[ext_resource type="Texture2D" uid="uid://dqwrfsc0ivc17" path="res://images/pixil-frame-0-3 (1).png" id="1_jlto6"]
-[ext_resource type="Script" path="res://scene/character_body_2d.gd" id="1_u7d7u"]
+[ext_resource type="Texture2D" uid="uid://dqwrfsc0ivc17" path="res://pixil-frame-0-3 (1).png" id="1_jlto6"]
+[ext_resource type="Script" path="res://character_body_2d.gd" id="1_u7d7u"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_8w2uh"]
 animations = [{

@@ -15,7 +15,7 @@ func get_input():
 	var left = Input.is_action_pressed('ui_left')
 	var jump = Input.is_action_just_pressed('ui_up')
 	var heal = Input.is_action_just_pressed('ui_down')
-	var atk = Input.is_action_pressed("spacebar")
+	var atk = Input.is_action_just_pressed("spacebar")
 	
 	
 	
@@ -24,12 +24,12 @@ func get_input():
 		velocity.y = jump_speed
 	
 	if right:
-		scale.x = 1
-		#velocity.x += run_speed
+		transform.x.x = 1
+		velocity.x += run_speed
 	
-	if left:
-		scale.x = -1
-		#velocity.x -= run_speed
+	if left :
+		transform.x.x = -1
+		velocity.x -= run_speed
 	
 	if health < 0:
 		position = Vector2(0,0)
@@ -40,7 +40,8 @@ func get_input():
 	if health > max_health:
 		health = max_health
 	
-	
+	if atk:
+		$mainarea/CollisionShape2D.set_deferred("disabled",false)
 	
 	
 	
@@ -63,9 +64,7 @@ func _physics_process(delta):
 
 
 
-func _on_area_2d_2_body_entered(body: Node2D) -> void:
-	health += -1
 
 
-func _on_area_2d_2_body_exited(body: Node2D) -> void:
+func _on_area_2d_area_entered(area: Area2D) -> void:
 	pass # Replace with function body.
