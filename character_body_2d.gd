@@ -42,20 +42,20 @@ func get_input():
 	if health > max_health:
 		health = max_health
 	
-	#if atk:
-		#
-		#$atkarea/CollisionShape2D.set_deferred("disabled",false)
-		#await get_tree().create_timer(0.1).timeout
-		#$atkarea/CollisionShape2D.set_deferred("disabled",true)
+	if atk:
+		
+		$atkarea/CollisionShape2D.set_deferred("disabled",false)
+		await get_tree().create_timer(0.1).timeout
+		$atkarea/CollisionShape2D.set_deferred("disabled",true)
 	
 	
 	
-	# print(health)
+	print(health)
 	
 	
 func _physics_process(delta):
 	
-	# print(health)
+	 #print(health)
 	velocity.y += gravity * delta
 	
 	get_input()

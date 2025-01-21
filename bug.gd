@@ -27,13 +27,14 @@ func _physics_process(delta: float) -> void:
 	
 	
 	
-	# print(health)
+	print(health)
 	
 	 
 	
 	
 	
-	
+	if health <= 0:
+		self.get_parent().remove_child(self)
 	
 	
 	move_and_slide()
@@ -46,3 +47,7 @@ func _on_area_2d_body_entered(body: Node2D) -> void:
 
 func _on_area_2d_body_exited(body: Node2D) -> void:
 	pass # Replace with function body.
+
+
+func _on_atkarea_body_entered(body: Node2D) -> void:
+	health += -1
