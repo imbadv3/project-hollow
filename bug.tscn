@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=3 uid="uid://ckyevr0fchq7q"]
+[gd_scene load_steps=5 format=3 uid="uid://ckyevr0fchq7q"]
 
 [ext_resource type="Script" path="res://bug.gd" id="1_7kgon"]
 [ext_resource type="Texture2D" uid="uid://q80aan3igu25" path="res://pixil-frame-0-6.png" id="2_75hdo"]
@@ -15,10 +15,7 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_qo3c4"]
-size = Vector2(133, 27)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_8jcan"]
-size = Vector2(208, 96.5)
+size = Vector2(133, 57)
 
 [node name="bug" type="CharacterBody2D"]
 position = Vector2(688, 201)
@@ -34,9 +31,3 @@ animation = &"new_animation"
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, 30.5)
 shape = SubResource("RectangleShape2D_qo3c4")
-
-[node name="Area2D" type="Area2D" parent="."]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-position = Vector2(0, -3.75)
-shape = SubResource("RectangleShape2D_8jcan")

@@ -1,8 +1,9 @@
-[gd_scene load_steps=8 format=4 uid="uid://86b0h5f4o3ev"]
+[gd_scene load_steps=10 format=4 uid="uid://86b0h5f4o3ev"]
 
 [ext_resource type="Texture2D" uid="uid://b88ew8oxokib0" path="res://pixil-frame-0-8.png" id="1_qkljt"]
 [ext_resource type="PackedScene" uid="uid://b6u5s7816yb1h" path="res://character_body_2d.tscn" id="2_64w4s"]
-[ext_resource type="PackedScene" uid="uid://ckyevr0fchq7q" path="res://bug.tscn" id="3_m7v1c"]
+[ext_resource type="Script" path="res://bug.gd" id="3_rurg2"]
+[ext_resource type="Texture2D" uid="uid://q80aan3igu25" path="res://pixil-frame-0-6.png" id="4_ov2gk"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_21pyw"]
 texture = ExtResource("1_qkljt")
@@ -18,8 +19,19 @@ sources/1 = SubResource("TileSetAtlasSource_21pyw")
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_kcodd"]
 size = Vector2(83.5, 73)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_o1ih6"]
-size = Vector2(166, 129)
+[sub_resource type="SpriteFrames" id="SpriteFrames_go0tn"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_ov2gk")
+}],
+"loop": true,
+"name": &"new_animation",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qo3c4"]
+size = Vector2(133, 57)
 
 [node name="main" type="Node2D"]
 
@@ -41,16 +53,18 @@ position = Vector2(132, -4)
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D/atkarea"]
 shape = SubResource("RectangleShape2D_kcodd")
 
-[node name="bug" parent="." instance=ExtResource("3_m7v1c")]
+[node name="bug" type="CharacterBody2D" parent="."]
 position = Vector2(805, 94)
-collision_layer = 1
-collision_mask = 1
+script = ExtResource("3_rurg2")
+metadata/_edit_group_ = true
 
-[node name="bug area" type="Area2D" parent="bug"]
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="bug"]
+sprite_frames = SubResource("SpriteFrames_go0tn")
+animation = &"new_animation"
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="bug/bug area"]
-shape = SubResource("RectangleShape2D_o1ih6")
+[node name="CollisionShape2D" type="CollisionShape2D" parent="bug"]
+position = Vector2(0, 15.5)
+shape = SubResource("RectangleShape2D_qo3c4")
 
 [connection signal="area_entered" from="CharacterBody2D/atkarea" to="CharacterBody2D" method="_on_area_2d_area_entered"]
 [connection signal="body_entered" from="CharacterBody2D/atkarea" to="CharacterBody2D" method="_on_atkarea_body_entered"]
-[connection signal="body_entered" from="bug/bug area" to="CharacterBody2D" method="_on_area_2d_2_body_entered"]
