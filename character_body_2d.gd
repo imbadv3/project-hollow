@@ -17,7 +17,7 @@ func get_input():
 	var left = Input.is_action_pressed('ui_left')
 	var jump = Input.is_action_just_pressed('ui_up')
 	var heal = Input.is_action_just_pressed('ui_down')
-	var atk = Input.is_action_just_pressed("spacebar")
+	var atk = Input.is_action_pressed("spacebar")
 	
 	
 	
@@ -42,13 +42,15 @@ func get_input():
 	if health > max_health:
 		health = max_health
 	
-	if atk:
-		$mainarea/CollisionShape2D.set_deferred("disabled",false)
+	#if atk:
+		#
+		#$atkarea/CollisionShape2D.set_deferred("disabled",false)
+		#await get_tree().create_timer(0.1).timeout
+		#$atkarea/CollisionShape2D.set_deferred("disabled",true)
 	
 	
 	
-	
-	
+	# print(health)
 	
 	
 func _physics_process(delta):
@@ -62,11 +64,7 @@ func _physics_process(delta):
 	
 
 
-
-
-
-
-
-
-func _on_area_2d_area_entered(area: Area2D) -> void:
-	pass # Replace with function body.
+func _on_atkarea_body_entered(body: Node2D) -> void:
+		#if is_in_group('hurtbox'):
+		print("event firing")
+		health += -1
