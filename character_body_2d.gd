@@ -53,11 +53,14 @@ func get_input():
 	
 func _physics_process(delta):
 	
-	# print(health)
+	#print(health)
 	velocity.y += gravity * delta
 	
 	get_input()
-	
+	if velocity.x ==0:
+		$AnimatedSprite2D.stop()
+	else:
+		$AnimatedSprite2D.play("default")
 	move_and_slide()
 	
 
