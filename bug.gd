@@ -27,7 +27,7 @@ func _physics_process(delta: float) -> void:
 	
 	
 	
-	print(health)
+	#print(health)
 	
 	 
 	
@@ -51,3 +51,4 @@ func _on_area_2d_body_exited(body: Node2D) -> void:
 
 func _on_atkarea_body_entered(body: Node2D) -> void:
 	health += -1
+	print(health)
