@@ -40,7 +40,7 @@ sources/2 = SubResource("TileSetAtlasSource_wlyt0")
 sources/3 = SubResource("TileSetAtlasSource_wh015")
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_kcodd"]
-size = Vector2(83.5, 73)
+size = Vector2(83.5, 115.5)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_go0tn"]
 animations = [{
@@ -69,6 +69,7 @@ position = Vector2(329, 183)
 position = Vector2(132, -4)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D/atkarea"]
+position = Vector2(0, 21.25)
 shape = SubResource("RectangleShape2D_kcodd")
 
 [node name="Camera2D" type="Camera2D" parent="CharacterBody2D"]

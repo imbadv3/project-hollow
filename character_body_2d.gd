@@ -45,6 +45,10 @@ func get_input():
 	if atk:
 		
 		$atkarea/CollisionShape2D.set_deferred("disabled",false)
+		
+		
+		
+		
 		await get_tree().create_timer(0.25).timeout
 		$atkarea/CollisionShape2D.set_deferred("disabled",true)
 	

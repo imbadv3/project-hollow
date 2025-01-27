@@ -1,13 +1,50 @@
-[gd_scene load_steps=5 format=3 uid="uid://b6u5s7816yb1h"]
+[gd_scene load_steps=13 format=3 uid="uid://b6u5s7816yb1h"]
 
-[ext_resource type="Texture2D" uid="uid://dqwrfsc0ivc17" path="res://pixil-frame-0-3 (1).png" id="1_jlto6"]
 [ext_resource type="Script" path="res://character_body_2d.gd" id="1_u7d7u"]
+[ext_resource type="Texture2D" uid="uid://davkjew0ltm32" path="res://pixil-frame-0-13.png" id="2_upqym"]
+[ext_resource type="Texture2D" uid="uid://w10hgiao46rq" path="res://pixil-frame-1-2.png" id="3_sq745"]
+[ext_resource type="Texture2D" uid="uid://cwjlxie7o044f" path="res://pixil-frame-2-2.png" id="4_jbeih"]
+[ext_resource type="Texture2D" uid="uid://peqmutchggtt" path="res://pixil-frame-3-2.png" id="5_uf586"]
+[ext_resource type="Texture2D" uid="uid://bfo5bo8ja4nd8" path="res://pixil-frame-4-2.png" id="6_1jpcr"]
+[ext_resource type="Texture2D" uid="uid://35byorl5slko" path="res://pixil-frame-5-2.png" id="7_asgib"]
+[ext_resource type="Texture2D" uid="uid://d2f25uofxytex" path="res://pixil-frame-6-2.png" id="8_nh2em"]
+[ext_resource type="Texture2D" uid="uid://d0rmbdnhxstcm" path="res://images/character standing.png" id="9_lc4gt"]
+[ext_resource type="Texture2D" uid="uid://etovs2nl8rsw" path="res://images/char walk.png" id="10_sw25e"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_8w2uh"]
 animations = [{
 "frames": [{
+"duration": 0.25,
+"texture": ExtResource("2_upqym")
+}, {
+"duration": 0.25,
+"texture": ExtResource("3_sq745")
+}, {
+"duration": 0.25,
+"texture": ExtResource("4_jbeih")
+}, {
+"duration": 0.25,
+"texture": ExtResource("5_uf586")
+}, {
+"duration": 0.25,
+"texture": ExtResource("6_1jpcr")
+}, {
+"duration": 0.25,
+"texture": ExtResource("7_asgib")
+}, {
+"duration": 0.25,
+"texture": ExtResource("8_nh2em")
+}],
+"loop": true,
+"name": &"attack_ani",
+"speed": 5.0
+}, {
+"frames": [{
 "duration": 1.0,
-"texture": ExtResource("1_jlto6")
+"texture": ExtResource("9_lc4gt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_sw25e")
 }],
 "loop": true,
 "name": &"default",
@@ -15,15 +52,19 @@ animations = [{
 }]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_qdacu"]
-height = 25.6
+radius = 13.0
+height = 37.0
 
 [node name="CharacterBody2D" type="CharacterBody2D"]
-position = Vector2(-1, 1)
+position = Vector2(1, 0)
 script = ExtResource("1_u7d7u")
 metadata/_edit_group_ = true
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+scale = Vector2(1.3, 1.6)
 sprite_frames = SubResource("SpriteFrames_8w2uh")
+animation = &"attack_ani"
+frame_progress = 0.886568
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 scale = Vector2(5, 5)
